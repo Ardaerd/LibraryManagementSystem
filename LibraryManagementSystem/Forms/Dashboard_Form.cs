@@ -16,5 +16,18 @@ namespace LibraryManagementSystem.Forms
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Dashboard_Form_Shown(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            // Show the login form
+            Login_Form loginForm = new Login_Form(this);
+            loginForm.Show();
+        }
     }
 }
