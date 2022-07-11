@@ -59,7 +59,7 @@ namespace LibraryManagementSystem.Database
         }
 
         // Function to set data and execute query
-        public void setData(string query, MySqlParameter[] parameters)
+        public int setData(string query, MySqlParameter[] parameters)
         {
             MySqlCommand command = new MySqlCommand(query, GetConnection());
 
@@ -69,9 +69,11 @@ namespace LibraryManagementSystem.Database
             }
             openConnection();
 
-            command.ExecuteNonQuery();
+            int i = command.ExecuteNonQuery();
 
             closeConnection();
+
+            return i; 
         }
     }
 }
