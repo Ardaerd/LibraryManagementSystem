@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LibraryManagementSystem.Database;
+using MySql.Data.MySqlClient;
 
 namespace LibraryManagementSystem.Forms
 {
@@ -39,8 +41,49 @@ namespace LibraryManagementSystem.Forms
 
         private void button_login_Click(object sender, EventArgs e)
         {
-            dashboardForm.Enabled = true;
-            this.Close();
+            MyDB db = new MyDB();
+
+            string username = textBox_username.Text;
+            string password = textBox_password.Text;
+
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM app_users WHERE username = @usn AND password = @pass",db.GetConnection());
+
+            command.Parameters.Add("@usn",MySqlDbType.VarChar).Value = username;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            // Check if this username is exist or not 
+            if (table.Rows.Count > 0) // if exist
+            {
+                dashboardForm.Enabled = true;
+                this.Close();
+            }
+            else // if not
+            {
+                // Check if the username is empty
+                if (username.Trim().Equals(""))
+                {
+                    MessageBox.Show("Enter Your Username to Login", "Empty Username", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                // Check if the password is empty
+                else if (password.Trim().Equals(""))
+                {
+                    MessageBox.Show("Enter Your Password to Login", "Empty Password", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                // Check if the user doesn't exist
+                else 
+                {
+                    MessageBox.Show("Wrong Username or Password", "Wrong Data", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+
         }
     }
 }
