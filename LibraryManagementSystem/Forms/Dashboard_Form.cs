@@ -29,5 +29,12 @@ namespace LibraryManagementSystem.Forms
             Login_Form loginForm = new Login_Form(this);
             loginForm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Show the login form
+            ManageGenresForm manageGenresForm = new ManageGenresForm();
+            manageGenresForm.Show();
+        }
     }
 }
