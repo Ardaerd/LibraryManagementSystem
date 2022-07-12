@@ -32,9 +32,16 @@ namespace LibraryManagementSystem.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // Show the login form
+            // Show the genres form
             ManageGenresForm manageGenresForm = new ManageGenresForm();
             manageGenresForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Show the author form
+            ManageAuthorForm manageAuthorForm = new ManageAuthorForm();
+            manageAuthorForm.Show();
         }
     }
 }
