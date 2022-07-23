@@ -178,6 +178,7 @@
             this.button_books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_books.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_books.UseVisualStyleBackColor = true;
+            this.button_books.Click += new System.EventHandler(this.button_books_Click);
             // 
             // panel2
             // 

@@ -98,7 +98,7 @@ namespace LibraryManagementSystem.Classes
         public DataTable authorList()
         {
             DataTable table = new DataTable();
-            table = db.getData("SELECT * FROM authors", null);
+            table = db.getData("SELECT id, concat(firstname, ' ', lastname) as FullName, education, bio FROM authors", null);
 
             return table;
         }

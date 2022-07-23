@@ -84,9 +84,8 @@ namespace LibraryManagementSystem.Forms
         {
             textBox_id.Text = dataGridView_author.CurrentRow.Cells[0].Value.ToString();
             textBox_firstname.Text = dataGridView_author.CurrentRow.Cells[1].Value.ToString();
-            textBox_lastname.Text = dataGridView_author.CurrentRow.Cells[2].Value.ToString();
-            textBox_education.Text = dataGridView_author.CurrentRow.Cells[3].Value.ToString();
-            richTextBox_bio.Text = dataGridView_author.CurrentRow.Cells[4].Value.ToString();
+            textBox_education.Text = dataGridView_author.CurrentRow.Cells[2].Value.ToString();
+            richTextBox_bio.Text = dataGridView_author.CurrentRow.Cells[3].Value.ToString();
 
         }
 

@@ -44,13 +44,13 @@
             this.dataGridView_author = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_education = new System.Windows.Forms.TextBox();
-            this.textBox_lastname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox_firstname = new System.Windows.Forms.TextBox();
             this.textBox_id = new System.Windows.Forms.TextBox();
             this.label_name = new System.Windows.Forms.Label();
             this.label_id = new System.Windows.Forms.Label();
+            this.textBox_lastname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -236,14 +236,6 @@
             this.textBox_education.Size = new System.Drawing.Size(214, 30);
             this.textBox_education.TabIndex = 11;
             // 
-            // textBox_lastname
-            // 
-            this.textBox_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_lastname.Location = new System.Drawing.Point(146, 143);
-            this.textBox_lastname.Name = "textBox_lastname";
-            this.textBox_lastname.Size = new System.Drawing.Size(214, 30);
-            this.textBox_lastname.TabIndex = 10;
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,15 +244,6 @@
             this.label1.Size = new System.Drawing.Size(137, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Education:";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 32);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "LastName:";
             // 
             // textBox_firstname
             // 
@@ -295,6 +278,23 @@
             this.label_id.Size = new System.Drawing.Size(44, 32);
             this.label_id.TabIndex = 4;
             this.label_id.Text = "ID:";
+            // 
+            // textBox_lastname
+            // 
+            this.textBox_lastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_lastname.Location = new System.Drawing.Point(146, 143);
+            this.textBox_lastname.Name = "textBox_lastname";
+            this.textBox_lastname.Size = new System.Drawing.Size(214, 30);
+            this.textBox_lastname.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 144);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 32);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "LastName:";
             // 
             // ManageAuthorForm
             // 
@@ -335,12 +335,12 @@
         private System.Windows.Forms.DataGridView dataGridView_author;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_education;
-        private System.Windows.Forms.TextBox textBox_lastname;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_firstname;
         private System.Windows.Forms.TextBox textBox_id;
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.Label label_id;
+        private System.Windows.Forms.TextBox textBox_lastname;
+        private System.Windows.Forms.Label label2;
     }
 }

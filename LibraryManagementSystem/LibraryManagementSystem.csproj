@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Author.cs" />
+    <Compile Include="Classes\Books.cs" />
     <Compile Include="Classes\Genre.cs" />
     <Compile Include="Database\MyDB.cs" />
     <Compile Include="Form1.cs">
@@ -97,6 +98,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AuthorListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthorListForm.Designer.cs">
+      <DependentUpon>AuthorListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard_Form.cs">
       <SubType>Form</SubType>
@@ -116,6 +123,12 @@
     <Compile Include="Forms\ManageAuthorForm.Designer.cs">
       <DependentUpon>ManageAuthorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ManageBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManageBooksForm.Designer.cs">
+      <DependentUpon>ManageBooksForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ManageGenresForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +137,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AuthorListForm.resx">
+      <DependentUpon>AuthorListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard_Form.resx">
       <DependentUpon>Dashboard_Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManageAuthorForm.resx">
       <DependentUpon>ManageAuthorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManageBooksForm.resx">
+      <DependentUpon>ManageBooksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManageGenresForm.resx">
       <DependentUpon>ManageGenresForm.cs</DependentUpon>
